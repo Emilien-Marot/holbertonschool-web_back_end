@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-to_str = __import__('3-to_str').to_str
+'''
+Here you go
+'''
+
 
 a: int = 1
 pi: float = 3.14
