@@ -5,7 +5,7 @@ Here you go
 import typing
 
 
-def to_kv(k: 'str', v: typing.Union[int, float]) -> typing.Tuple[str, float]:
+def to_kv(k: str, v: typing.Union[int, float]) -> typing.Tuple[str, float]:
     '''
     here we go
     :param k:
