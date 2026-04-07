@@ -4,10 +4,10 @@ here you go
 '''
 
 
-def floor(n: float) -> int:
+def to_str(n: float) -> str:
     '''
     here you go
     :param n:
     :return:
     '''
-    return int(n)
+    return f"{n}"
