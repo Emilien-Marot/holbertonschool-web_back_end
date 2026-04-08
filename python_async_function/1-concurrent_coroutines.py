@@ -2,9 +2,10 @@
 """
 here you go
 """
+import typing
 
 
-async def wait_n(n: int, max_delay: int) -> list[float]:
+async def wait_n(n: int, max_delay: int) -> typing.List[float]:
     """
     here we go
     :param n
