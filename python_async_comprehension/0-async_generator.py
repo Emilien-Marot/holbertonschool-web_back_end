@@ -5,13 +5,12 @@ here you go
 import typing
 import asyncio
 import random
-from typing import Any, AsyncGenerator
+from types import NoneType
 
 
-async def async_generator() -> AsyncGenerator[float, Any]:
+async def async_generator() -> typing.Generator[float, NoneType, NoneType]:
     """
-    here we go
-    :param max_delay:
+    there we go
     :return:
     """
     for i in range(10):
