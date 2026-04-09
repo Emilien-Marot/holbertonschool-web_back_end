@@ -14,10 +14,8 @@ async def measure_runtime() -> float:
     :return:
     """
     start = time()
-    await asyncio.gather(
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension()
-    )
+    await asyncio.gather(async_comprehension(),
+                         async_comprehension(),
+                         async_comprehension(),
+                         async_comprehension())
     return time() - start
