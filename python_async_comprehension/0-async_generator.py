@@ -5,7 +5,9 @@ here you go
 import typing
 import asyncio
 import random
-from types import NoneType
+
+
+NoneType = type(None)
 
 
 async def async_generator() -> typing.Generator[float, NoneType, NoneType]:
