@@ -50,7 +50,7 @@ class Server:
         dataset = self.__indexed_dataset
         data = []
         i = index
-        next_index = 1001
+        next_index = 1000
         while i < 1000:
             line = dataset.get(i)
             if line is not None:
