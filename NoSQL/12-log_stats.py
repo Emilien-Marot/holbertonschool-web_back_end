@@ -21,7 +21,7 @@ if __name__ == "__main__":
             total_methods[method["_id"]] = method["count"]
     print("Methods:")
     for method in total_methods:
-        print(f"    method {method}: {total_methods[method]}")
+        print(f"\tmethod {method}: {total_methods[method]}")
     col_status = col.aggregate(
         [
             {"$match": {"method": "GET", "path": "/status"}},
