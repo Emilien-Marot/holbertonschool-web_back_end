@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
+    'jest/no-error-equal': 'off',
     'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': [
