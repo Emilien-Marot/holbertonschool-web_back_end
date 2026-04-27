@@ -1,0 +1,1 @@
+If READMEs are annoying and you know it, clap your hands
