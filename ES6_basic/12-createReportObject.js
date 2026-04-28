@@ -3,7 +3,7 @@ export default function createReportObject(employeesList) {
     allEmployees: employeesList,
     getNumberOfDepartments: (employees) => {
       let department = 0;
-      for (const dpt of employees) {
+      for (const dpt in employees) {
         department += 1;
       }
       return department;
