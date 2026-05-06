@@ -1,10 +1,9 @@
 import { uploadPhoto } from './utils';
 
 export default function getFullResponseFromAPI(success) {
-  return (new Promise(() => {
-    if (success) {
-      return (uploadPhoto());
-    }
-    throw 'The fake API is not working currently';
-  }))
+  if (success) {
+    return Promise.resolve(uploadPhoto())
+  } else {
+    return (new Promise(() => {throw 'The fake API is not working currently'}))
+  }
 }
