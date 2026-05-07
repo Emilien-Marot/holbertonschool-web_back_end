@@ -8,11 +8,12 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         if (line.reason !== undefined) {
           return ({
             status: line.status,
-            value: line.reason
+            value: line.reason.toString()
           })
         }
         return (line)
       })
+      console.log(res)
       return (res)
     });
 }
