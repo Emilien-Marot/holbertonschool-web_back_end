@@ -3,5 +3,15 @@ import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.allSettled([uploadPhoto(fileName), signUpUser(firstName, lastName)])
-    .then((results) => results.forEach((result) => result));
+    .then((val) => {
+      return val.map((line) => {
+        if (line.reason !== undefined) {
+          return ({
+            status: line.status,
+            value: line.reason
+          })
+        }
+        return (line)
+      })
+    });
 }
