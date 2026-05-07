@@ -13,7 +13,6 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         }
         return (line)
       })
-      console.log(res)
       return (res)
     });
 }
