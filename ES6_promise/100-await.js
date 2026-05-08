@@ -1,7 +1,7 @@
 import { uploadPhoto, createUser } from './utils';
 
-export default function handleProfileSignup() {
-  return Promise.allSettled([uploadPhoto(), createUser()])
+export default async function handleProfileSignup() {
+  return await Promise.allSettled([uploadPhoto(), createUser()])
     .then((val) => {
       const arr = val.map((line) => {
         if (line.reason !== undefined) {
