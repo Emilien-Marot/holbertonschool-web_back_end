@@ -9,6 +9,9 @@ export default async function handleProfileSignup() {
         }
         return (line.value);
       });
+      if (arr[0] == null || arr[1] == null){
+        return ({ photo: null, user: null });
+      }
       return ({ photo: arr[0], user: arr[1] });
     });
 }
