@@ -25,6 +25,7 @@
     "eslint-plugin-jest": "^29.15.2",
     "nodemon": "^3.1.14",
     "chai": "^6.2.2",
+    "jest": "^30.4.2",
     "mocha": "^11.7.5",
     "request": "^2.88.2",
     "sinon": "^22.0.0"
