@@ -3,11 +3,7 @@ const fs = require('fs').promises;
 
 const hostname = '127.0.0.1';
 const port = 1245;
-let filename = undefined;
-if (process.argv.length >= 3) {
-  filename = process.argv[2];
-}
-
+const [, , filename] = process.argv;
 
 async function readCsv(filename) {
   let content;
@@ -45,16 +41,16 @@ async function readCsv(filename) {
 
 const app = createServer();
 app.on('request', async (req, res) => {
-    if (req.url === '/') {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.end('Hello Holberton School!');
-    } else if (req.url === '/students') {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.end(await readCsv(filename));
-    }
-  })
+  if (req.url === '/') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello Holberton School!');
+  } else if (req.url === '/students') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end(await readCsv(filename));
+  }
+});
 
 app.listen(port, hostname);
 
