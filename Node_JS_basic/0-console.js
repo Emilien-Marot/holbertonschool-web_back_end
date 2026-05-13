@@ -1,4 +1,3 @@
-function test(a) {
-  console.log(`${a}\n`);
-}
-module.exports = test;
+module.exports = (a) => {
+  process.stdout.write(`${a}\n`);
+};

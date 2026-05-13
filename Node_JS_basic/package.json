@@ -12,26 +12,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai-http": "^5.1.2",
-    "express": "^5.2.1"
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.28.6",
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.5",
-    "babel-cli": "^6.26.0",
-    "babel-jest": "^30.4.1",
-    "babel-preset-env": "^1.7.0",
-    "lint": "*",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jest": "^29.15.2",
-    "nodemon": "^3.1.14",
-    "chai": "^6.2.2",
-    "jest": "^30.4.2",
-    "mocha": "^11.7.5",
-    "request": "^2.88.2",
-    "sinon": "^22.0.0"
+      "babel-cli": "^6.26.0",
+      "babel-preset-env": "^1.7.0",
+      "lint": "*",
+      "eslint": "^6.8.0",
+      "eslint-config-airbnb-base": "^14.2.1",
+      "eslint-plugin-import": "^2.29.1",
+      "eslint-plugin-jest": "^22.21.0",
+      "nodemon": "^2.0.22",
+      "chai": "^4.4.1",
+      "mocha": "^6.2.3",
+      "request": "^2.88.2",
+      "sinon": "^7.5.0"
   }
 }
