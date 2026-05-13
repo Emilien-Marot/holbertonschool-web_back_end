@@ -1,29 +1,25 @@
-const { createServer } = require('node:http');
+const express = require('express');
 
-const hostname = '127.0.0.1';
+const app = express();
 const port = 1245;
 
-const app = createServer();
-app.on('request', async (req, res) => {
-  res.statusCode = 200;
-  if (req.url === '/') {
-    res.setHeader('Content-Type', 'text/html');
-    res.end('Hello Holberton School!');
-  } else {
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('<!DOCTYPE html>\n'
-      + '<html lang="en">\n'
-      + '<head>\n'
-      + '<meta charset="utf-8">\n'
-      + '<title>Error</title>\n'
-      + '</head>\n'
-      + '<body>\n'
-      + '<pre>Cannot GET /lskdlskd</pre>\n'
-      + '</body>\n'
-      + '</html>');
-  }
+app.get('/', (req, res) => {
+  res.send('Hello Holberton School!');
 });
 
-app.listen(port, hostname);
+app.get('/./', (req, res) => {
+  res.send('<!DOCTYPE html>\n'
+    + '<html lang="en">\n'
+    + '<head>\n'
+    + '<meta charset="utf-8">\n'
+    + '<title>Error</title>\n'
+    + '</head>\n'
+    + '<body>\n'
+    + '<pre>Cannot GET /lskdlskd</pre>\n'
+    + '</body>\n'
+    + '</html>');
+});
+
+app.listen(port);
 
 module.exports = app;
