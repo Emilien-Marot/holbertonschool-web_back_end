@@ -3,6 +3,10 @@ const fs = require('fs').promises;
 
 const hostname = '127.0.0.1';
 const port = 1245;
+let filename = undefined;
+if (process.argv.length >= 3) {
+  filename = process.argv[2];
+}
 
 
 async function readCsv(filename) {
@@ -48,7 +52,7 @@ app.on('request', async (req, res) => {
     } else if (req.url === '/students') {
       res.statusCode = 200;
       res.setHeader('Content-Type', 'text/plain');
-      res.end(await readCsv('database.csv'));
+      res.end(await readCsv(filename));
     }
   })
 
