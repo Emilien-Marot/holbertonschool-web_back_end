@@ -1,5 +1,5 @@
 const express = require('express');
-const { promises: fs } = require('fs');
+const fs = require('fs').promises;
 
 const app = express();
 const port = 1245;
@@ -12,7 +12,7 @@ async function readCsv(filename) {
   try {
     content = (await fs.readFile(filename)).toString();
   } catch (e) {
-    return ('Cannot load the database');
+    return (`${result}Cannot load the database`);
   }
   const listCsv = content.split('\n');
   const listCol = listCsv[0].split(',');
