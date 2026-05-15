@@ -12,7 +12,7 @@ async function readCsv(filename) {
   try {
     content = (await fs.readFile(filename)).toString();
   } catch (e) {
-    return (`${result}\nCannot load the database`);
+    return (`${result}Cannot load the database`);
   }
   const listCsv = content.split('\n');
   const listCol = listCsv[0].split(',');
