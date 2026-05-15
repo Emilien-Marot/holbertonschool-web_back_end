@@ -1,3 +1,3 @@
 module.exports = (a) => {
-  process.stdout.write(`${a}\n`);
+  process.stdout.write(`${a}`);
 };
