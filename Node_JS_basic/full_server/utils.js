@@ -21,9 +21,7 @@ export default function readDatabase(filename) {
         listField[line.field].push(line.firstname);
       });
       return (listField);
-    }, () => {
-      return (new Error('Cannot load the database'));
-    });
+    }, () => new Error('Cannot load the database'));
 }
 
 module.exports = readDatabase;

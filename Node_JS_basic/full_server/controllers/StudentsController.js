@@ -2,8 +2,7 @@ const readDatabase = require('../utils');
 
 export default class StudentsController {
   static getAllStudents(request, response) {
-    const argv = process.argv;
-    const path = argv[argv.length - 1];
+    const [path] = process.argv.slice(-1);
     readDatabase(path).catch(() => {
       response.status(500);
       response.send('Cannot load the database');
@@ -20,8 +19,7 @@ export default class StudentsController {
   }
 
   static getAllStudentsByMajor(request, response) {
-    const argv = process.argv;
-    const path = argv[argv.length - 1];
+    const [path] = process.argv.slice(-1);
     const field = request.params.major;
     if (field !== 'CS' && field !== 'SWE') {
       response.status(500);
